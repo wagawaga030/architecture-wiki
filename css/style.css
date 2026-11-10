@@ -1,0 +1,195 @@
+/* ===== 共用底色 ===== */
+:root {
+  --bg: #FFF9F0;   /* 米白 */
+  --text: #3A3330; /* 深棕灰 */
+}
+
+/* ===== 分類主題色（新增分類時，只能在這裡新增一個區塊）===== */
+.theme-palace {
+  --primary: #C0392B; /* 朱紅 */
+  --accent: #E0A526;  /* 金 */
+}
+.theme-temple {
+  --primary: #E07A2F; /* 暖橘 */
+  --accent: #8B5A2B;  /* 棕 */
+}
+.theme-garden {
+  --primary: #4F9D69; /* 綠 */
+  --accent: #A8D5BA;  /* 淺綠 */
+}
+.theme-baroque {
+  --primary: #8E2C48; /* 酒紅 */
+  --accent: #D4A94A;  /* 金 */
+}
+.theme-gothic {
+  --primary: #5B5F9E; /* 藍紫 */
+  --accent: #9AA3B5;  /* 灰藍 */
+}
+
+/* ===== 基本設定 ===== */
+* {
+  box-sizing: border-box;
+}
+
+body {
+  margin: 0;
+  background: var(--bg);
+  color: var(--text);
+  font-family: "Yuanti TC", "Hiragino Maru Gothic ProN", "PingFang TC",
+    "Microsoft JhengHei", system-ui, sans-serif;
+  font-size: 1.05rem;
+  line-height: 1.9;
+}
+
+main {
+  max-width: 720px;
+  margin: 0 auto;
+  padding: 2rem 1.25rem 3rem;
+}
+
+/* ===== 標題 ===== */
+h1,
+h2,
+h3 {
+  color: var(--primary, var(--text));
+  line-height: 1.4;
+}
+
+h1 {
+  margin: 0 0 0.5rem;
+  font-size: 2rem;
+}
+
+h2 {
+  margin: 0 0 1rem;
+  padding-bottom: 0.3rem;
+  font-size: 1.4rem;
+  border-bottom: 4px dashed var(--accent, var(--text));
+}
+
+h3 {
+  margin: 0.5rem 0;
+  font-size: 1.2rem;
+}
+
+p {
+  margin: 0 0 1rem;
+}
+
+.intro {
+  font-size: 1.15rem;
+}
+
+section + section {
+  margin-top: 2.5rem;
+}
+
+/* ===== 連結與按鈕 ===== */
+a {
+  color: var(--primary, var(--text));
+}
+
+.button {
+  display: inline-block;
+  padding: 0.5rem 1.4rem;
+  background: var(--primary, var(--text));
+  color: var(--bg);
+  text-decoration: none;
+  border-radius: 999px;
+  box-shadow: 3px 3px 0 var(--accent, var(--text));
+}
+
+/* ===== 清單 ===== */
+ul {
+  padding-left: 1.3rem;
+}
+
+li {
+  margin-bottom: 0.8rem;
+}
+
+/* ===== 插圖 ===== */
+figure {
+  margin: 1.5rem 0;
+}
+
+figure svg,
+.card svg {
+  display: block;
+  width: 100%;
+  height: auto;
+}
+
+figure svg {
+  max-width: 400px;
+  margin: 0 auto;
+}
+
+/* 手繪風 SVG：線條與填色一律吃主題變數 */
+.hand-drawn {
+  fill: none;
+  stroke: var(--primary);
+  stroke-width: 4;
+  stroke-linecap: round;
+  stroke-linejoin: round;
+}
+
+.fill-primary {
+  fill: var(--primary);
+}
+
+.fill-accent {
+  fill: var(--accent);
+}
+
+.fill-cream {
+  fill: var(--bg);
+}
+
+/* ===== 首頁入口卡片 ===== */
+.card-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(240px, 1fr));
+  gap: 1.5rem;
+}
+
+.card {
+  display: block;
+  padding: 1rem 1.25rem 1.25rem;
+  color: var(--text);
+  text-decoration: none;
+  background: var(--bg);
+  border: 4px solid var(--primary);
+  border-radius: 24px 18px 26px 16px;
+  box-shadow: 6px 6px 0 var(--accent);
+}
+
+.card:hover,
+.card:focus {
+  transform: translate(2px, 2px);
+  box-shadow: 4px 4px 0 var(--accent);
+}
+
+.card p {
+  margin: 0;
+}
+
+/* ===== 參考資料 ===== */
+.references {
+  font-size: 0.95rem;
+}
+
+.references a {
+  word-break: break-all;
+}
+
+/* ===== 手機版微調 ===== */
+@media (max-width: 480px) {
+  h1 {
+    font-size: 1.6rem;
+  }
+
+  main {
+    padding: 1.5rem 1rem 2.5rem;
+  }
+}
