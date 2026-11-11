@@ -125,6 +125,11 @@ figure svg {
   margin: 0 auto;
 }
 
+.card svg {
+  max-width: 320px;
+  margin: 0 auto;
+}
+
 /* 手繪風 SVG：線條與填色一律吃主題變數 */
 .hand-drawn {
   fill: none;
