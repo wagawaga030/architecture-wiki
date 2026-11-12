@@ -25,6 +25,10 @@
   --primary: #5B5F9E; /* 藍紫 */
   --accent: #9AA3B5;  /* 灰藍 */
 }
+.theme-roman {
+  --primary: #2E8B8B; /* 地中海青綠 */
+  --accent: #D9B26F;  /* 砂岩黃 */
+}
 
 /* ===== 基本設定 ===== */
 * {
